@@ -2,3 +2,32 @@
   font-family: $font-name , sans-serif;
   font-size: $font-size;
 }
+
+@mixin textHeader{
+  font-family: $secondary-text;
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  @include position(absolute, 50% null null 50%);
+}
+
+@mixin textP{
+  font-size: 20px;
+  text-align: center;
+}
+
+@mixin hoverBox {
+  border: 1px solid grey;
+  @include box-sizing(border-box);
+  opacity: 1;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

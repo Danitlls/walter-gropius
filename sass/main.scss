@@ -24,11 +24,10 @@
 @import
   'layout/base',
   'layout/header',
-  'layout/section',
-  'layout/nav';
-  // 'layout/side-content',
-  // 'layout/footer';
+  'layout/main-section',
+  'layout/nav',
+  'layout/footer';
 
 // 5. Components
-// @import
-  // 'components/button',
+@import
+  'components/boxes';

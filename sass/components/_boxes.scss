@@ -1,0 +1,22 @@
+.boxes {
+  max-width: 1240px;
+  float: right;
+  h2{
+    @include textHeader;
+    @include respond-to("large") {
+      font-size: 25px;
+    }
+  }
+}
+
+.box {
+  position: relative;
+  opacity: .7;
+  @include  grid-column(3);
+  @include respond-to("medium") {
+    @include grid-column(6);
+  };
+  &:hover{
+    @include hoverBox;
+  }
+  }

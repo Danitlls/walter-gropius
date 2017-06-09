@@ -7,14 +7,32 @@ header {
   height: 300px;
   background-size: contain;
 }
-.box.photo1 {
-  background-image: url("../img/photo1.jpg");
+.box.walter {
+  background-image: url("../img/walter.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.box.photo2 {
-  background-image: url("../img/photo2.jpg");
+.box.bauhaus {
+  background-image: url("../img/bauhaus.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.a {
+  background-image: url("../img/a.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.b {
+  background-image: url("../img/b.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box.c {
+  background-image: url("../img/c.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -524,7 +542,7 @@ img {
 header {
   background-image: url("../img/gropius2.jpg");
   background-position: center 65%;
-  height: 500px;
+  height: 400px;
   width: 100vw;
 }
 header .title {
@@ -535,9 +553,9 @@ header .title {
   text-align: center;
   position: relative;
   top: 70%;
-  background-color: rgba(254, 187, 114, 0.47);
+  background-color: rgba(255, 187, 114, 0.7);
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   header .title {
     font-size: 1.77689em;
   }
@@ -549,48 +567,83 @@ header .title {
   margin-left: 20px;
   padding: 20px 0;
 }
+.first section, .second section {
+  width: calc(41.66667% - 28.33333px);
+  float: left;
+  margin-left: 20px;
+}
+.first section::after, .second section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.first aside, .second aside {
+  width: calc(58.33333% - 31.66667px);
+  float: left;
+  margin-left: 20px;
+}
+@media (min-width: 1470px) {
+  .first, .second {
+    font-size: 1.77689em;
+  }
+}
 
 .first {
   background-color: #cc3433;
 }
 .first section {
-  width: calc(41.66667% - 28.33333px);
+  width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
 }
 .first section p {
   font-family: "Lato", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   padding: 20px 5%;
-  color: white;
-  background-color: #513dbb;
-}
-.first section h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 40px;
-  margin: 5%;
-  margin-top: 110px;
-  transform: rotate(-28deg);
-  font-weight: bold;
+  color: #413c3d;
+  background-color: #ffdb7e;
 }
 .first aside {
+  height: 550px;
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px;
+}
+.first aside img {
+  width: calc(41.66667% - 28.33333px);
+  float: left;
+  margin-left: 20px;
+  float: none;
+  padding: 5% 0px;
+}
+.first aside h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
   width: calc(58.33333% - 31.66667px);
   float: left;
   margin-left: 20px;
+  transform: rotate(-28deg);
+  font-weight: bold;
+  padding: 20px 5px;
+}
+.first aside h2:first-of-type {
+  padding-top: 50px;
+}
+.first aside h2::first-letter {
+  color: #cc3433;
+  background-color: black;
 }
 
 .second {
   background-color: #fdc85d;
+  padding-top: 100px;
 }
 .second section {
-  width: calc(50% - 30px);
-  float: left;
-  margin-left: 20px;
+  font-size: 20px;
+  text-align: center;
 }
-.second aside {
-  width: calc(50% - 30px);
-  float: left;
-  margin-left: 20px;
+.second section li {
+  padding-top: 30px;
 }
 
 nav {
@@ -601,8 +654,67 @@ nav {
   background-color: #cc3433;
 }
 nav ul li {
-  padding: 5px;
+  padding: 10px;
   display: inline-block;
+}
+
+footer {
+  padding-top: 80px;
+  clear: both;
+  color: #cc3433;
+  text-align: center;
+}
+footer a {
+  color: black;
+}
+footer img {
+  width: 28px;
+  padding: 10px 5px;
+}
+
+.boxes {
+  max-width: 1240px;
+  float: right;
+}
+.boxes h2 {
+  font-family: "Montserrat";
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@media (max-width: 900px) {
+  .boxes h2 {
+    font-size: 25px;
+  }
+}
+
+.box {
+  position: relative;
+  opacity: .7;
+  width: calc(25% - 25px);
+  float: left;
+  margin-left: 20px;
+}
+@media (max-width: 700px) {
+  .box {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+.box:hover {
+  border: 1px solid grey;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

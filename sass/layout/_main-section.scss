@@ -1,0 +1,67 @@
+.first, .second{
+  @include grid-column(12);
+  padding: 20px 0;
+
+  section{
+    @include grid-column(5);
+    @include clearfix;
+  }
+  aside{
+    @include grid-column(7);
+  }
+  @include respond-to(x-large){
+    font-size: modular-scale(2); //Bourbun function to adapt font-size.
+  };
+}
+
+.first{
+  background-color: $color-secondary-dark;
+  section{
+    @include grid-column(12);
+    //  @include grid-push(1); //Neat columm manipulation of left margin.
+    p{
+       @include font($normal-text, 30px);
+      //  @include grid-column(11); //Neat column.
+       padding: 20px 5%;
+       color:$color-text-1;
+       background-color: $color-primary-dark;
+      }
+  }
+
+  aside{
+    height: 550px;
+    @include grid-column(12);
+    img{
+      @include grid-column(5);
+      float:none;
+      padding: 5% 0px;
+    }
+    h2{
+      @include font($secondary-text, 50px);
+      @include grid-column(7);
+      transform: rotate(-28deg);
+      font-weight: bold;
+      padding: 20px 5px;
+    }
+    h2:first-of-type{
+      padding-top: 50px;
+    }
+    h2::first-letter{
+      color: $color-secondary-dark;
+      background-color: black;
+    }
+  }
+}
+
+
+.second{
+  background-color: $color-secondary-light;
+  padding-top: 100px;
+  section{
+    @include textP;
+    li{
+      padding-top: 30px;
+    }
+}
+
+}
