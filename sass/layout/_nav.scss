@@ -2,6 +2,7 @@ nav{
   @include font($secondary-text, 25px);
   position: absolute;
   top: 10px;
+  background-color: $color-secondary-dark;
   ul{
     li{
       padding: 5px;

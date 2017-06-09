@@ -1,18 +1,21 @@
 header{
-  background-image: url("../img/walter.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/gropius2.jpg");
+  @extend %back-photo;
   background-position: center 65%;
   height: 500px;
   width: 100vw;
 
   .title{
     @include font($secondary-text, 80px);
+
     font-weight: bold;
-    color: grey;
-    position: relative;
-    top:70%;
-    background-color: rgba(255, 255, 255, .5);
+    color: $color-text-1;
     text-align: center;
+    @include position(relative, 70% null null null); //Bourbun function.
+    background-color: rgba(254, 187, 114, 0.47);
+    @include respond-to(medium){
+      font-size: modular-scale(2); //Bourbun function to adapt font-size.
+    };
+
   }
 }

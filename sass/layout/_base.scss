@@ -1,12 +1,18 @@
 body {
   @include font($normal-text, 30px);
   overflow: auto;
+  background-color:  $color-secondary-light;
 }
 a{
-  color: #008578;
+  color: $color-accent-1;
   text-decoration: none;
   &:hover{
-    background-color: #a58d07;
+    background-color: $color-secondary-dark;
     color: white;
   }
+}
+img{
+  width: 100%;
+  margin-right: -10px;
+  padding-right: -10px;
 }
