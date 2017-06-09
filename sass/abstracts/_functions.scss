@@ -1,0 +1,41 @@
+.box {
+  $icons: ;
+
+  // width: $size;
+  height: $box-height;
+  background-size: contain;
+
+  @each $icon in $icons{
+    &.#{$icon} {
+      background-image: url($icons-dir + '/#{$icon}.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  // background-image: url($icons-dir + '/#{$icon}.jpg');
+}
+
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
