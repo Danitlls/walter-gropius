@@ -1,3 +1,12 @@
 body {
   @include font($normal-text, 30px);
+  overflow: auto;
+}
+a{
+  color: #008578;
+  text-decoration: none;
+  &:hover{
+    background-color: #a58d07;
+    color: white;
+  }
 }

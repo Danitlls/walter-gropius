@@ -1,1 +1,11 @@
-
+nav{
+  @include font($secondary-text, 25px);
+  position: absolute;
+  top: 10px;
+  ul{
+    li{
+      padding: 5px;
+      display: inline-block;
+    }
+  }
+}
