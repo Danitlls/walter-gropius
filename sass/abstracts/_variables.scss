@@ -1,11 +1,4 @@
-// 	// Main Primary color */
-// $color-primary-dark: #14423d;
-// $color-primary-light: #008578;
-//
-// // Main Secondary color (1) */
-// $color-secondary-dark:  #a58d07;
-// $color-secondary-light: #fea920;
-// //
+
 // Main Primary color */
 $color-primary-dark:#ffdb7e;
 $color-primary-light: #c4c7c9;
@@ -13,20 +6,16 @@ $color-primary-light: #c4c7c9;
 // Main Secondary color (1) */
 $color-secondary-dark:  #cc3433; //red
 $color-secondary-light: #fdc85d;
-//
+
 // 	// Main tertiary color (2) */
 $color-accent-1: #fdc65f;
 $color-text-1: #413c3d;
 $color-neutral: #e7e1d5;
-//
-//
+$color-neutral-transparent: rgba(253, 250 ,253, 0.35);
+
 $primary-text: 'Text Me One';
 $secondary-text: 'Montserrat';
 $normal-text: 'Lato';
-
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Text Me One', sans-serif;
-// font-family: 'Lato', sans-serif;
 
 // section 1 pics
 $icons-dir: "../img";
@@ -36,7 +25,7 @@ $box-height: 300px;
 $breakpoints: (
   'x-small': (max-width: 415px),
   'small': (max-width: 660px),
-  'medium': (max-width: 700px),
-  'large': (max-width: 900px),
+  'medium': (max-width: 1000px),
+  'large': (max-width: 1100px),
   'x-large': (min-width: 1470px),
 );

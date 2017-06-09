@@ -20,6 +20,11 @@
   text-align: center;
 }
 
+@mixin combineColors($color, $bgcolor)  {
+  color: $color;
+  background-color: $bgcolor;
+}
+
 @mixin hoverBox {
   border: 1px solid grey;
   @include box-sizing(border-box);

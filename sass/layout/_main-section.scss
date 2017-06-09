@@ -1,40 +1,41 @@
-.first, .second{
+main{
   @include grid-column(12);
-  padding: 20px 0;
 
-  section{
-    @include grid-column(5);
-    @include clearfix;
-  }
-  aside{
-    @include grid-column(7);
-  }
-  @include respond-to(x-large){
+  @include respond-to(medium){
     font-size: modular-scale(2); //Bourbun function to adapt font-size.
   };
 }
 
 .first{
+  padding-top: 20px;
   background-color: $color-secondary-dark;
-  section{
+  height: 580px;
+}
+
+.first  section{
     @include grid-column(12);
-    //  @include grid-push(1); //Neat columm manipulation of left margin.
     p{
-       @include font($normal-text, 30px);
-      //  @include grid-column(11); //Neat column.
-       padding: 20px 5%;
-       color:$color-text-1;
-       background-color: $color-primary-dark;
+      @include font($normal-text, 20px);
+      @include padding(10px null 10px 18em);
+      @include combineColors($color-text-1, $color-secondary-light);
+      @include respond-to(medium){
+        padding-left: 10px;
       }
+      }
+
   }
 
-  aside{
-    height: 550px;
+.first aside{
     @include grid-column(12);
+    @include clearfix;
+    @include position(relative, null null null null );
+
     img{
+      max-height: 400px;
       @include grid-column(5);
+      @include position(absolute, -50%  30  null null );
       float:none;
-      padding: 5% 0px;
+      margin-top: 180px;
     }
     h2{
       @include font($secondary-text, 50px);
@@ -42,26 +43,42 @@
       transform: rotate(-28deg);
       font-weight: bold;
       padding: 20px 5px;
+      @include respond-to(medium){
+        font-size: 30px;
+      };
     }
     h2:first-of-type{
-      padding-top: 50px;
+      margin-top: -100px;
+      @include respond-to(medium){
+        margin-top: 10px;
+      }
     }
     h2::first-letter{
       color: $color-secondary-dark;
       background-color: black;
     }
   }
-}
 
 
 .second{
   background-color: $color-secondary-light;
-  padding-top: 100px;
-  section{
+  padding-top: 50px;
+}
+.second section{
+    @include grid-column(5);
     @include textP;
     li{
-      padding-top: 30px;
+      padding: 20px;
     }
+    @include respond-to("small") {
+      @include grid-column(12);
+      padding-bottom: 30px;
+    };
 }
-
-}
+.second  aside{
+    @include grid-column(7);
+    @include respond-to("small") {
+      @include grid-column(12);
+      padding-bottom: 30px;
+    };
+  }

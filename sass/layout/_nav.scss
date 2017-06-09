@@ -9,4 +9,8 @@ nav{
       display: inline-block;
     }
   }
+  @include respond-to(medium){
+    width: 100%;
+  };
+
 }
