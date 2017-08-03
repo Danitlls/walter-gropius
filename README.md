@@ -26,7 +26,7 @@
 * CSS
 
 ### Github Pages link
-[Tribute Page](http://rawgit.com/danitlls/walter-gropius/master/index.html/)
+[Tribute Page](http://rawgit.com/danitlls/walter-gropius/master/index.html#/)
 
 
 ## License
